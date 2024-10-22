@@ -1,0 +1,40 @@
+.Image {
+	height: 500px;
+	border-radius: 50%;
+}
+
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+/* .RightPage {
+  text-align: left;
+  height: 100%;
+  width: 40%;
+  position: fixed;
+  padding-top: 20px;
+  right: 0;
+} */
+
+.LeftPage {
+	text-align: center;
+	height: 90%;
+	width: 100%;
+	position: fixed;
+	padding-top: 0px;
+	left: 0;
+  }
+
+  .HealthImage {
+    width:50%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    -index: -1;
+    border-radius: 15px;
+    filter: brightness(50%);
+}

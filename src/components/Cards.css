@@ -1,0 +1,65 @@
+.Cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Resources-Title{
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.Card{
+    text-align: center;
+    background-color: white;
+    color: black;
+    width:85%;
+    height: 22%;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-left: 30px;
+    transition: all ease 500ms;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 40px rgb(31, 0, 172);
+    letter-spacing: 2px;
+}
+
+.Card:hover {
+    width: 86%;
+    height: 30%;
+}
+
+.DashboardLink:hover{
+    text-decoration: underline;
+}
+
+.ContactCard{
+    text-align: center;
+    background-color: white;
+    color: black;
+    width:85%;
+    height: 300px;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-left: 30px;
+    transition: all ease 500ms;
+    box-shadow: 2px 2px 20px rgb(36, 36, 36);
+}
+
+.ContactCardLink:hover{
+    text-decoration: underline;
+}
+
+.Graph{
+    width: 60%;
+}
+
+.Aboutus{
+    width: 35%;
+}
+
+.Contact{
+    width: 30%;
+}
