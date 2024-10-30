@@ -16,6 +16,7 @@ const App = () => {
   };
 
   return (
+   <>
     <div className="App">
       <Router>
         <Navbar />
@@ -29,6 +30,7 @@ const App = () => {
         </Routes>
       </Router>
     </div>
+   </>
   );
 };
 

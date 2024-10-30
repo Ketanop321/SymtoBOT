@@ -1,6 +1,5 @@
-// components/Navbar.js
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Navbar = () => {
   return (
@@ -24,16 +23,11 @@ const Navbar = () => {
 };
 
 const styles = {
-
-  body: {
-    padding: "60px",
-  },
   navbar: {
-     background: "green",
+    background: "green",
     padding: "15px",
-    
-  
-    
+    display: "flex",
+    justifyContent: "center", // Center items in the navbar
   },
   navList: {
     display: "flex",
@@ -48,7 +42,7 @@ const styles = {
     color: "#fff",
     textDecoration: "none",
     fontSize: "20px",
-  }
+  },
 };
 
-export default Navbar;
+export default Navbar; 
