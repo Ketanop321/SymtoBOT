@@ -10,41 +10,34 @@ const Dashboard = () => {
     const fetchData = async () => {
       const options = {
         method: 'GET',
-        url: 'https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/total',
-        params: { country: 'World' },
-        headers: {
-          'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
-          'x-rapidapi-host': process.env.REACT_APP_RAPIDAPI_HOST,
-        },
+        url: process.env.REACT_APP_COVID_API_URL,  
       };
       
       try {
-        const response = await axios.request(options); //request for covid data
-        setData(response.data.data); // Store the data from the API response
+        const response = await axios.request(options);
+        console.log(response.data);  
+        setData(response.data);  
       } catch (error) {
-        console.error(error);
+        console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures the effect runs only once when the component mounts
+  }, []); 
 
   return (
-    <>
-      <div className="Dashboard">
-        <h1 className="Dashboard-title">COVID-19 Dashboard</h1>
-        <div className="Dashboard-items">
-          <h1 className="Confirmed">Confirmed Cases: {data.confirmed}</h1>
-          <h1 className="Recovered">Recovered: {data.recovered}</h1>
-          <h1 className="Deaths">Deaths: {data.deaths}</h1>
-          <h1 className="lastChecked">Last Checked: {data.lastChecked}</h1>
-          <h1 className="lastReported">Last Reported: {data.lastReported}</h1>
-        </div>
-        <div className="Button3">
-          <h1><Link className='App-link' to='/'>Go Home</Link></h1>
-        </div>
+    <div className="Dashboard">
+      <h1 className="Dashboard-title">COVID-19 Dashboard</h1>
+      <div className="Dashboard-items">
+        <h1 className="Confirmed">Confirmed Cases: {data.cases}</h1>
+        <h1 className="Recovered">Recovered: {data.recovered}</h1>
+        <h1 className="Deaths">Deaths: {data.deaths}</h1>
+        <h1 className="lastUpdated">Last Updated: {new Date(data.updated).toLocaleString()}</h1>
       </div>
-    </>
+      <div className="Button3">
+        <h1><Link className='App-link' to='/'>Go Home</Link></h1>
+      </div>
+    </div>
   );
 };
 
