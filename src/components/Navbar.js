@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link to="/contact" style={styles.link}>Contact</Link>
         </li>
         <li style={styles.navItem}>
-          <Link to="/dashboard" style={styles.link}>Dashboard</Link>
+          <Link to="/dashboard" style={styles.link}> COVID-Dashboard</Link>
         </li>
       </ul>
     </nav>

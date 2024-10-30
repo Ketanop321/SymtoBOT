@@ -25,7 +25,7 @@ git clone https://github.com/yourusername/sytobot.git
 3. Navigate to the Project Directory
 bash
  ```
-cd sytobot
+cd symtobot
 ```
 4. Install Dependencies
 bash
