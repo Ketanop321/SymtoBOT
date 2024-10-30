@@ -9,7 +9,7 @@ const About = () => {
       <div className="about-content">
         <h1 className="about-title">About Us</h1>
         <p className="about-description">
-          Welcome to [Your Company], where our mission is to deliver innovative solutions to enhance the lives of our customers.
+          Welcome to symtoBOT, where our mission is to deliver innovative solutions to enhance the lives of our customers.
           With years of experience and a dedicated team, we pride ourselves on providing exceptional services tailored to your needs.
         </p>
 

@@ -27,7 +27,7 @@ const styles = {
     background: "green",
     padding: "15px",
     display: "flex",
-    justifyContent: "center", // Center items in the navbar
+    justifyContent: "center",  
   },
   navList: {
     display: "flex",
