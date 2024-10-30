@@ -28,6 +28,7 @@ const Dashboard = () => {
   return (
     <div className="Dashboard">
       <h1 className="Dashboard-title">COVID-19 Dashboard</h1>
+      <h1 className="title" >It's the total data of the world</h1>
       <div className="Dashboard-items">
         <h1 className="Confirmed">Confirmed Cases: {data.cases}</h1>
         <h1 className="Recovered">Recovered: {data.recovered}</h1>
