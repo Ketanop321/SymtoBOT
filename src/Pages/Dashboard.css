@@ -61,12 +61,15 @@
     transition: all ease 0.5s;
     font-size: 1rem;
     margin-top: 30px;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
   
   .Button3:hover {
     transform: scale(1.1);
     background-color: rgb(50, 175, 252);
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   /* Media Queries for Responsiveness */
@@ -108,3 +111,4 @@
     }
   }
   
+   
