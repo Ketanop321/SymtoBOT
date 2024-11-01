@@ -1,111 +1,96 @@
-.ContactContainer{
+.ContactContainer {
     background-color: lightskyblue;
     border-radius: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    margin-top: 160px;
+    padding: 15px;
+    margin: 5% auto;
+    width: 80%;
+    max-width: 600px;
 }
 
-.Title1{
-     color: black;
-}
-
-.Title2{
+.Title1, .Title2 {
     color: black;
-    font-weight: normal;
+    text-align: center;
+    font-size: 1.8em;
 }
 
-.Contact-Form{
-    align-self: center;
+.Contact-Form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30vh;
+    padding: 10px 0;
+    height: auto;  
 }
 
-.Contact-Caption{
+.Contact-Caption {
     color: black;
-    font-size: 20px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
-.Contact-Subject{
-    width: 300px;
-    height: 20px;
+.Contact-Subject, .Contact-Message {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1em;
     margin-bottom: 10px;
-    font-size: 25px;
 }
 
-.Contact-Subject:focus{
-    outline: 0;
-}
-
-.Contact-Message{
-    width: 300px;
-    height: 150px;
-    margin-bottom: 10px;
-    font-size: 25px;
-}
-
-.Contact-Message:focus{
-    outline: 0;
-}
-
-.Contact-Button{
+.Contact-Button {
     text-decoration: none;
     background-color: black;
     color: white;
     border-radius: 10px;
     width: 100px;
-    height: 26px;   
-    padding: 2px 6px 2px 6px;
+    padding: 5px;
     text-align: center;
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 1em;
+    transition: width 0.3s ease;
 }
 
-.Contact-Button:hover{
+.Contact-Button:hover {
     box-shadow: 7px 10px 12px -5px rgba(150,150,150,0.2);
     width: 120px;
 }
 
-/* .HealthImage {
-    width:850px;
-    height: 770px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 15px;
-    filter: brightness(50%);
-} */
-
-.Button4{
+.Button4 {
     color: white;
-    background-color: lightskyblue;
+    background-color: rgb(30, 210, 147);
     text-align: center;
-    padding-top: 1px;
-    padding-bottom: 20px;
-    width:12%;
-    height: 30px;
-    border-radius: 40px;
-    transition: all ease 500ms;
-    position: absolute;
-    top: 670px;
-    left:44%;
-    /* right: 0;
-    left: 300px;
-    bottom: 200px; */
-    font-size: 10px;
-    /* float: left; */
+    padding: 1px;
+    border-radius: 20px;
+ 
+    margin: 10px auto;
+    transition: all 0.5s ease;
+    width: fit-content;
+
 }
 
-.Button4:hover{
+.Button4:hover {
     transform: scale(1.25);
     background-color: rgb(50, 175, 252);
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .Title1 {
+        font-size: 1.5em;
+    }
+    
+    .Title2 {
+        font-size: 1.1em;
+    }
+
+    .Contact-Subject, .Contact-Message {
+        width: 90%;
+    }
+
+    .Contact-Button {
+        width: 90px;
+        font-size: 0.4em;
+    }
+
+    .Button4 {
+        font-size: 0.9em;
+        width: 80%;
+        padding: 8px;
+    }
 }
