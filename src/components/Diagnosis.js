@@ -1,3 +1,4 @@
+// Diagnosis Component
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Diagnosis.css';
@@ -42,7 +43,9 @@ const Diagnosis = (props) => {
   return (
     <div className='Diagnosis'>
       <div className='modal'>
-        
+        {/* Close Button */}
+        <button className='modal-close' onClick={props.onClose}>×</button>
+
         <h1>Potential Diagnosis</h1>
         {conditions.length > 0 ? (
           conditions.map((condition) => <h2 key={uuid()}>{condition.name}</h2>)
