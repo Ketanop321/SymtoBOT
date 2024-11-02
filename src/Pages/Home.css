@@ -35,6 +35,6 @@
     left: 0;
     bottom: 0;
     -index: -1;
-    border-radius: 15px;
+    
     filter: brightness(50%);
 }

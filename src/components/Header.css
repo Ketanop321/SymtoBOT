@@ -1,68 +1,53 @@
-.Welcome{
-    color:white;
+.Welcome {
+    color: white;
     position: relative;
-    /* top: 20px;
-    bottom: 0;
-    margin-left: 200px;
-    right: 0;
-    float: left; */
     letter-spacing: 2px;
     font-size: 20px;
 }
- 
-.Header{
-    color:white;
+
+.Header {
+
+    color: white;
     text-align: center;
     font-weight: bold;
     position: absolute;
-    top: 10%;
-    /* bottom: 0;
-    left: 30px;
-    right: 0;
-    float: left; */
+    top: 12%;
 }
 
-.Description{
-    color:white;
+.Description {
+    color: white;
     text-align: center;
     font-weight: lighter;
     position: absolute;
     top: 72%;
-    margin-left: 15%;
-    margin-right: 15%;
-    /* right: 20px;
-    left: 10px;
-    float: left; */
+    margin-left: 10%;
+    margin-right: 10%;
     letter-spacing: 1px;
 }
 
-.Symptobot{
-    width:45%;
+.Symptobot {
+    width: 45%;
     height: 45%;
     border-radius: 15px;
-    transition: all ease 500ms; 
+    transition: all ease 500ms;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     position: absolute;
     top: 20%;
-    /* right: 0;
-    left: 280px;
-    bottom: 0;
-    float: left; */
 }
 
 .SymptobotImg {
     padding-right: 110px;
-    width:60%;
+    width: 60%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
 .HealthImage {
-    width:100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
@@ -70,7 +55,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    -index: -1;
+    z-index: -1;
     border-radius: 15px;
     filter: brightness(50%);
 }
@@ -79,34 +64,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
- }
+}
 
-.Button{
+.Button {
+    
     color: white;
     background-color: lightskyblue;
     text-align: center;
-    padding-top: 1px;
-    padding-bottom: 20px;
-    width:30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
     height: 3%;
     border-radius: 40px;
     transition: all ease 500ms;
     position: absolute;
     top: 85%;
-    /* right: 0;
-    left: 300px;
-    bottom: 200px; */
     font-size: 10px;
-    /* float: left; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Button:hover{
+.Button:hover {
     transform: scale(1.25);
     background-color: rgb(50, 175, 252);
     text-decoration: underline;
 }
 
-.Links{
+.Links {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -120,5 +105,73 @@
 
 body {
     background: black;
-     justify-content: center;
-  }
+    justify-content: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .Header {
+        font-size: 1.5em;
+        top: 8%;
+    }
+    .Description {
+        font-size: 1em;
+        top: 70%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .Symptobot {
+        width: 60%;
+    }
+    .Button {
+        font-size: 0.8em;
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .SymptobotImg {
+        padding-right: 0;
+        width: 80%;
+    }
+    .Header {
+        font-size: 1.2em;
+        top: 12%;
+    }
+    .Description {
+        font-size: 0.9em;
+        top: 65%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .Button {
+        font-size: 0.9em;
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Symptobot {
+        width: 80%;
+        top: 25%;
+    }
+    .SymptobotImg {
+        width: 90%;
+    }
+    .Header {
+        font-size: 1em;
+        top: 15%;
+    }
+    .Description {
+        font-size: 0.8em;
+        top: 60%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .Button {
+        font-size: 0.7em;
+        width: 70%;
+        top: 80%;
+    }
+}
