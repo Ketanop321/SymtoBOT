@@ -5,12 +5,12 @@
     justify-content: space-between;
     padding: 20px;
     gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .Information-General,
 .Information-Symptoms {
-    width: 45%; /* Use relative width for flexibility */
+    width: 45%;  
     margin-left: 20px;
 }
 
@@ -168,3 +168,4 @@
         padding: 10px;
     }
 }
+ 

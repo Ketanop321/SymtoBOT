@@ -1,3 +1,4 @@
+// Chatbox Component
 import React, { useState } from 'react';
 import './Info.css';
 import Diagnosis from './Diagnosis';
@@ -45,6 +46,9 @@ const Chatbox = (props) => {
   // Handle form submission
   const handleSubmit = () => setSubmitted(true);
 
+  // Function to close the Diagnosis modal
+  const handleCloseDiagnosis = () => setSubmitted(false);
+
   // Get color for symptoms
   const getColor = (symptom) => {
     const index = symptoms.indexOf(symptom);
@@ -53,7 +57,14 @@ const Chatbox = (props) => {
 
   return (
     <div className='Information'>
-      {submitted && <Diagnosis sex={gender} age={age} symptomStatus={symptomStatus} />}
+      {submitted && (
+        <Diagnosis 
+          sex={gender} 
+          age={age} 
+          symptomStatus={symptomStatus} 
+          onClose={handleCloseDiagnosis}  // Pass close function
+        />
+      )}
       <div className='Information-General'>
         <h1 className='Information-Title'>Please Select Your Sex: {gender}</h1>
         <div className='Information-Genders'>
