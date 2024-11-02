@@ -3,54 +3,47 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.Information-General {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-    margin-left: 60px;
-}
-
+.Information-General,
 .Information-Symptoms {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
+    width: 45%; /* Use relative width for flexibility */
+    margin-left: 20px;
 }
 
 .Information-Title {
-    font-size: 25px;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .Information-Genders {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    gap: 10px;
 }
 
 .Information-Gender {
     background-color: rgb(223, 223, 223);
     border-radius: 25px;
-    width: 95px;
-    height: 120px;
+    width: 90px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
+    cursor: pointer;
 }
 
 .Information-Gender:hover {
-    box-shadow: 1px 1px 40px rgb(150, 150, 150);
+    box-shadow: 1px 1px 20px rgb(150, 150, 150);
 }
 
-.Information-Male{
-    width: 75px;
-}
-
-.Information-Female{
-    width: 50px;
+.Information-Male, .Information-Female {
+    width: 75%;
 }
 
 .Information-Age {
@@ -61,58 +54,117 @@
 
 .Information-AgeText {
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 .Information-AgeSlider {
-    width: 240px;
-}
-
-.Information-Form {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.Information-Typebox {
-    width: 350px;
-    height: 30px;
-}
-
-.Information-Add {
-    width: 50px;
-    height: 35px;
+    width: 100%;
 }
 
 .Information-SymptomList {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    /* width: 100%; */
+    gap: 5px;
+    justify-content: center;
 }
 
 .Information-Symptom {
     background-color: rgb(137, 183, 252);
     border: 1px solid black;
-    border-radius: 15px;
-    width: 18%;
-    height: 5vh;
-    margin-right: 2px;
-    margin-bottom: 2px;
-    padding-top: 15px;
+    border-radius: 10px;
+    width: 22%; /* Responsive width */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    cursor: pointer;
 }
 
-.Information-Symptom:active {
-    background-color: rgb(92, 156, 252);
-}
-
-.Information-Submit{
+.Information-Submit {
     background-color: rgb(58, 78, 255);
     color: white;
-    font-size: 30px;
-    width: 94%;
-    height: 40px;
+    font-size: 1.2em;
+    width: 90%;
+    max-width: 300px; /* Max width for larger screens */
+    height: 50px;
     border-radius: 10px;
     font-weight: bold;
+    margin-top: 20px;
+    align-self: center;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .Information-General,
+    .Information-Symptoms {
+        width: 100%; /* Full width on medium screens */
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .Information-Title {
+        font-size: 1.8em;
+    }
+
+    .Information-Gender {
+        width: 80px;
+        height: 100px;
+    }
+
+    .Information-Symptom {
+        width: 30%; /* Adjusted for medium screens */
+    }
+
+    .Information-Submit {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .Information {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .Information-General,
+    .Information-Symptoms {
+        width: 90%; /* Slight padding on mobile */
+    }
+
+    .Information-Title {
+        font-size: 1.6em;
+    }
+
+    .Information-Symptom {
+        width: 45%; /* Adjusted for mobile */
+        height: 45px;
+    }
+
+    .Information-Submit {
+        font-size: 1em;
+        width: 100%; /* Full width button on mobile */
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .Information-Title {
+        font-size: 1.4em;
+    }
+
+    .Information-AgeText {
+        font-size: 1.2em;
+    }
+
+    .Information-Symptom {
+        width: 100%; /* Single-column layout for small screens */
+    }
+
+    .Information-Submit {
+        font-size: 1em;
+        padding: 10px;
+    }
 }
