@@ -1,9 +1,9 @@
-#🩺 Sytobot
+#🩺 Symtobot
 Welcome to Sytobot, your go-to solution for quick and reliable symptom diagnosis! Built with React, CSS, and powered by the Infermedica API, Sytobot assists users in identifying potential diagnoses based on symptoms. This project was created for the WEB TECH HACKATHON: INNOVATE WITH FINANCE AND HEALTHCARE hosted by Hunar Intern.
 
  
 #📑 Overview
-Sytobot aims to make healthcare more accessible by providing a user-friendly interface that allows users to input their symptoms and receive instant feedback on possible health conditions. By leveraging the powerful Infermedica API, Sytobot analyzes symptoms and suggests relevant diagnoses, helping users better understand their health and decide when to seek medical assistance.
+Symtobot aims to make healthcare more accessible by providing a user-friendly interface that allows users to input their symptoms and receive instant feedback on possible health conditions. By leveraging the powerful Infermedica API, Sytobot analyzes symptoms and suggests relevant diagnoses, helping users better understand their health and decide when to seek medical assistance.
 
 ##⚙️ Features
 Real-time Symptom Analysis: Input symptoms and get an immediate diagnosis suggestion.
