@@ -30,14 +30,20 @@ const Chatbox = (props) => {
   // Handle age change
   const handleChange = (event) => setAge(event.target.value);
 
-  // Change symptom status and color
+  // Toggle symptom status and color
   const changeStatus = (symptom) => {
     const index = symptoms.indexOf(symptom);
     const newSymptomStatus = [...symptomStatus];
     const newColor = [...color];
 
-    newSymptomStatus[index] = 'present';
-    newColor[index] = true;
+    // Toggle the symptom status and color
+    if (newSymptomStatus[index] === 'absent') {
+      newSymptomStatus[index] = 'present';
+      newColor[index] = true;
+    } else {
+      newSymptomStatus[index] = 'absent';
+      newColor[index] = false;
+    }
 
     setSymptomStatus(newSymptomStatus);
     setColor(newColor);
@@ -48,12 +54,6 @@ const Chatbox = (props) => {
 
   // Function to close the Diagnosis modal
   const handleCloseDiagnosis = () => setSubmitted(false);
-
-  // Get color for symptoms
-  const getColor = (symptom) => {
-    const index = symptoms.indexOf(symptom);
-    return symptomStatus[index] === 'present' ? 'rgb(92, 156, 252)' : 'rgb(137, 183, 252)';
-  };
 
   return (
     <div className='Information'>
